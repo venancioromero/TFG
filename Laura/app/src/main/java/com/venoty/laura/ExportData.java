@@ -24,6 +24,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import ir.mahdi.mzip.zip.ZipArchive;
+
 public class ExportData extends AppCompatActivity {
 
     private String TAG     ="Laura || ExportData";
@@ -45,10 +47,17 @@ public class ExportData extends AppCompatActivity {
     public void exportData(View v) throws ParseException {
         EditText from = findViewById(R.id.dateFrom);
         EditText to   = findViewById(R.id.dateTo);
+        EditText pass = findViewById(R.id.et_password);
 
         if (from.getText().toString().matches("") ||
                 to.getText().toString().matches("")) {
-            Toast.makeText(getApplicationContext(), "Please select dates",
+            Toast.makeText(getApplicationContext(), "Please select dates.",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (pass.getText().toString().matches("")) {
+            Toast.makeText(getApplicationContext(), "Please write password.",
                     Toast.LENGTH_SHORT).show();
             return;
         }
@@ -76,13 +85,21 @@ public class ExportData extends AppCompatActivity {
         File data = null;
 
         try {
-            data = File.createTempFile("Report", ".csv",getApplicationContext().getExternalCacheDir());
-            FileWriter out = (FileWriter) GenerateCsv.generateCsvFile(data,content);
-            i.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(data));
+            data = File.createTempFile("Report", ".csv",
+                                        getApplicationContext().getExternalCacheDir());
+
+            GenerateCsv.generateCsvFile(data,content);
+
+            ZipArchive zipArchive = new ZipArchive();
+            zipArchive.zip(data.getPath(),
+                    data.getPath() + ".zip",
+                            pass.getText().toString());
+
+            i.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(data.getPath()+".zip")));
             i.putExtra(Intent.EXTRA_SUBJECT, "Laura data export" );
             i.putExtra(Intent.EXTRA_TEXT, message);
             startActivity(Intent.createChooser(i, "E-mail"));
-            Toast.makeText(getApplicationContext(), "Data exporteden ",
+            Toast.makeText(getApplicationContext(), "Data exported.",
                     Toast.LENGTH_SHORT).show();
 
         } catch (IOException e) {
@@ -107,10 +124,8 @@ public class ExportData extends AppCompatActivity {
         return s;
     }
 
-
-
     private List<Glucose> retrieveData(long from_epoch, long to_epoch) {
-        GlucoseDBHelper db     = new GlucoseDBHelper(this);
+        GlucoseDBHelper db    = new GlucoseDBHelper(this);
         List<Glucose> records = db.getIntervalHistory(from_epoch,to_epoch);
         db.close();
         return records;

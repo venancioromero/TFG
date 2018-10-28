@@ -40,4 +40,7 @@ dependencies {
 
     // Chart
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    // zip
+    implementation 'com.github.ghost1372:Mzip-Android:0.4.0'
 }

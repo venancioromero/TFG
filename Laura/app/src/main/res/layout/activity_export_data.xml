@@ -12,17 +12,15 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/export_data"
-        android:textSize="40dp" />
+        android:textSize="30dp" />
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
         android:text="From:"
-        android:textSize="30dp"
-         />
+        android:textSize="30dp"/>
     <EditText
         android:id="@+id/dateFrom"
         android:layout_width="match_parent"
@@ -32,7 +30,7 @@
         android:cursorVisible="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textAlignment="center"
         android:onClick="showDatePicker"/>
 
@@ -56,8 +54,32 @@
         android:cursorVisible="false"
         android:textAlignment="center"
         android:focusable="false"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:focusableInTouchMode="false"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_margin="20dp"
+        android:inputType="text"
+        android:textSize="30dp"
+        android:gravity="center_horizontal"
+        />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:inputType="textPassword" />
+
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
