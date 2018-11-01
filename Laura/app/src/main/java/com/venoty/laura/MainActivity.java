@@ -1,10 +1,7 @@
 package com.venoty.laura;
 
-import android.app.ActionBar;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -12,12 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.venoty.laura.adapters.TabAdapter;
-import com.venoty.laura.databases.GlucoseDBHelper;
 import com.venoty.laura.fragments.ChartFragment;
 import com.venoty.laura.fragments.HomeFragment;
-import com.venoty.laura.models.Glucose;
-
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,18 +59,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent myIntent = new Intent(this, ExportData.class);
                 startActivity(myIntent);
                 return true;
-            case R.id.insert:
-                insertRandomData();
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    private void insertRandomData(){
-        GlucoseDBHelper db = new GlucoseDBHelper(getApplicationContext());
-        Random rand  = new Random();
-        int  measure = rand.nextInt(300) + 50;
-        db.insertMeasure(new Glucose(measure));
-        db.close();
     }
 }

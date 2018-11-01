@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -30,12 +29,13 @@ public class ExportData extends AppCompatActivity {
 
     private String TAG     ="Laura || ExportData";
     private String CSV_SEP = ",";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_export_data);
-        int o = R.id.dateFrom;
     }
+
     public void showDatePicker(View v) {
         DialogFragment newFragment = new MyDatePickerFragment();
         ((MyDatePickerFragment) newFragment).setView(v);
@@ -82,7 +82,7 @@ public class ExportData extends AppCompatActivity {
 
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("plain/text");
-        File data = null;
+        File data;
 
         try {
             data = File.createTempFile("Report", ".csv",

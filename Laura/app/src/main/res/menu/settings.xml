@@ -3,8 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/export"
         android:title="@string/export_data"/>
-    <item android:id="@+id/insert"
-        android:title="@string/insert_data"/>
   <!--  <item android:id="@+id/reset_db"
         android:title="@string/reset_database"/>-->
 </menu>

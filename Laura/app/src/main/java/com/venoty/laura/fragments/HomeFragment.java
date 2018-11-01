@@ -10,18 +10,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.venoty.laura.R;
 import com.venoty.laura.adapters.GlucoseAdapter;
 import com.venoty.laura.databases.GlucoseDBHelper;
 import com.venoty.laura.models.Glucose;
 import com.venoty.laura.runnables.NFCReaderThread;
-import com.venoty.laura.R;
 
 import java.util.ArrayList;
 import java.util.List;

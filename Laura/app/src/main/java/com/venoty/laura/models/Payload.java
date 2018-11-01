@@ -1,7 +1,5 @@
 package com.venoty.laura.models;
 
-import android.util.Log;
-
 public class Payload {
 
     private final String TAG = "Laura || Payload";

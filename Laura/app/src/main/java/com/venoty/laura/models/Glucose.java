@@ -22,14 +22,6 @@ public class Glucose {
     public int getMeasure() { return measure; }
     public void setMeasure(int measure) { this.measure = measure; }
 
-    public int getRawMeasure() {
-        return rawMeasure;
-    }
-
-    public int getRawTemperature() {
-        return rawTemperature;
-    }
-
     // Constructors
 
     public Glucose(){}
