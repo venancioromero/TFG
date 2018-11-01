@@ -1,6 +1,6 @@
 # Trabajo fin de grado
 ## Laura
-<img src="images/home_explained.jpeg" alt="Explicación pantalla principal"/>
+<img src="images/home_explained.jpeg" alt="Explicación pantalla principal" style="max-width:50%;"/>
 Application that read Free Style Libre and record all measures on embedded database.
 
 ### Features
