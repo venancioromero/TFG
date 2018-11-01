@@ -12,11 +12,10 @@ Application that read Free Style Libre and record all measures on embedded datab
 <p float="left">
   <img src="images/home_1.jpeg" alt="Pantalla principal" width="200"/>
   <img src="images/chart.jpeg" alt="Gráfica" width="200"/>
+   <img src="images/export_data_1.jpeg" alt="Export data 1" width="200"/>
+  <img src="images/export_data_2.jpeg" alt="Export data 2" width="200"/>
 </p>
-<p float="left">
-  <img src="images/export_data_1.jpeg" alt="Pantalla Principal" width="200"/>
-  <img src="images/export_data_2.jpeg" alt="Pantalla Principal" width="200"/>
-</p>
+
 ## Nfc-reader
 
 Android application that read Free Style Libre and send measures to HTTP server.
