@@ -1,5 +1,6 @@
 # Trabajo fin de grado
 ## Laura
+<img src="images/home_1.jpeg" alt="Pantalla Principal" width="200"/>
 ![Pantalla principal](images/home_1.jpeg =400x)
 ![Explicación pantalla principal](images/home_explained.jpeg)
 ![Gráfica](images/chart.jpeg =400x)
