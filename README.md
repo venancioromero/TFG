@@ -1,10 +1,10 @@
 # Trabajo fin de grado
 ## Laura
-![Pantalla principal](images/home_1.jpg)
+![Pantalla principal](images/home_1.jpeg =400x)
 ![Explicación pantalla principal](images/home_explained.jpeg)
-![Gráfica](images/chart.jpeg)
-![export data](images/export_data_1.jpeg)
-![export_data_2](images/export_data_2.jpeg)
+![Gráfica](images/chart.jpeg =400x)
+![export data](images/export_data_1.jpeg =400x)
+![export_data_2](images/export_data_2.jpeg =400x)
 
 ## Nfc-reader
 
